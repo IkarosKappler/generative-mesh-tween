@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Generative Mesh Tween Test I</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="description" content="Generative Mesh Tween, Test I" />
+    <meta name="keywords" content="generative, mesh, 2d, canvas, javascript, html5, tween" />
+    <meta name="author" content="Ikaros Kappler" />
+    <meta name="date" content="2017-05-30" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+    <script src="lib/jquery-3.2.0.min.js"></script>
+    <script src="lib/Tween.js"></script>
+    <script src="Complex.js"></script>
+    <script src="Graph.js"></script>
+    <script src="main.js"></script>
+  </head>
+
+  <body> 
+    <h3>Generative Mesh Tween Test I</h3>
+    Drag around the polygon corners or click 'Animate'.<br/>
+    <br/>
+    <div id="left">
+      <div class="label">Number of Nodes:</div> <input type="number" id="node_count" value="7" step="1" min="3" />
+      <button type="button" id="reload">Reload</button><br/>
+      <div class="label">Randomization:</div><br/>
+      <input type="radio" name="animation-type" id="animation-type-random" value="random" checked="checked" /><label for="animation-type-random">Random</label><br/>
+      <input type="radio" name="animation-type" id="animation-type-deviation" value="deviation" /><label for="animation-type-deviation">Deviation</label> <input type="number" id="deviation" value="80" min="1" /><br/>
+      <input type="radio" name="animation-type" id="animation-type-polycentroid" value="polycentroid" /><label for="animation-type-polycentroid">Poly Centroid</label><br/>
+      <div class="label">Easing:</div> <select id="easing"></select><br/>
+      <button type="button" id="animate">Animate</button><br/>
+    </div>
+    <div id="right">
+      Stats<br/>
+    </div>
+    <br/>
+
+    <canvas id="my_canvas" width="640" height="640"></canvas><br/>
+    <div id="debug"></div>
+ 
+  </body>
+</html>
